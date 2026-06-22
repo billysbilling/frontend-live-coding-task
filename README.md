@@ -10,6 +10,7 @@ API documentation: https://rickandmortyapi.com/documentation
 - TypeScript
 - Material UI
 - Vitest + Testing Library
+- MSW for API mocking in tests
 
 You may use `fetch` or add a data-fetching library if you prefer.
 
@@ -18,6 +19,12 @@ You may use `fetch` or add a data-fetching library if you prefer.
 ```bash
 npm install
 npm run dev
+```
+
+## Testing
+
+```bash
+npm test
 ```
 
 ## Rules
@@ -41,4 +48,4 @@ npm run dev
 
 - Refactor and organize the code to keep it readable and easy to extend.
 - Add loading, error, and empty states.
-- Add one or more tests in `src/__tests__/App.test.tsx`.
+- Add one or more tests in `src/__tests__/App.test.tsx`. Use MSW to mock Rick and Morty API responses in tests that cover data fetching behavior.
