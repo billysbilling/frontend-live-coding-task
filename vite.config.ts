@@ -8,5 +8,11 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
     setupFiles: './src/test/setup.ts',
+    server: {
+      deps: {
+        // Required for MUI to work correctly in jsdom test environment
+        inline: ['@mui/material', 'react-transition-group'],
+      },
+    },
   },
 })
